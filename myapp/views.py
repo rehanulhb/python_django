@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def home(request):
@@ -19,5 +20,8 @@ def dashboard(request):
     # Process 2
     # Process 3
     return HttpResponse("Hello dashboard")
+
+def about(request):
+    return render(request, 'about.html')
 
 
